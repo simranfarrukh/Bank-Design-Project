@@ -1,0 +1,19 @@
+ * @author Simran 
+ * @date 03.28.2022
+ */
+ 
+ 
+public class CheckingAccount extends Account{
+	private int nextCheckNumber;
+	
+	//constructor
+	CheckingAccount(){
+		super();
+	}
+	
+	//returns check number and then increase it by 1
+	public int getNextCheckNumber() {
+		nextCheckNumber++;
+		return nextCheckNumber;
+	}
+}
