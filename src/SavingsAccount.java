@@ -3,15 +3,6 @@
  * @date 03.28.2022
  */
 
-package com.fdmgroup.bankDesignProject;
-
-/*
- * UML Class Diagram: 
- * Account<———SavingsAccount
- * 
- * Direct Association with Account
- * Implements Account class constructor for all methods
- */
 
 public class SavingsAccount extends Account{
 	private double interestRate;
