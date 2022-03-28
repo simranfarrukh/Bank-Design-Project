@@ -1,3 +1,4 @@
+/**
  * @author Simran 
  * @date 03.28.2022
  */
@@ -5,16 +6,6 @@
 
 
 import java.util.ArrayList;
-
-/*
- * UML Class Diagram: 
- * AccountController<>———[Customer, Account]
- * 
- * Generalization and Multiple Inheritance with AccountController class
- * as parent and Customer class and Account class as children
- * AccountController class as a General Class (parent)
- * Customer & Account classes as Subclasses (children)
- */
 
 public class AccountController {
 	//creates Customer class array list called customers
