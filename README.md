@@ -35,7 +35,7 @@ Person
  * Direct Association with Customer
  * Implements Customer class constructor for all methods
 
-Savings
+SavingsAccount
  * Direct Association with Account
  * Implements Account class constructor for all methods
 
