@@ -2,7 +2,8 @@
  * @author Simran 
  * @date 03.28.2022
  */
-package com.fdmgroup.bankDesignProject;
+
+
 
 /*
  * UML Class Diagram: 
