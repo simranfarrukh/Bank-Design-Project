@@ -2,20 +2,7 @@
  * @author Simran 
  * @date 03.28.2022
  */
-
-
-
-/*
- * UML Class Diagram: 
- * AccountController<>———Account
- * Customer<>———Account
- * Account<———[SavingsAccount, CheckingAccount]
- * 
- * Generalization with AccountController as General class (parent)
- * Generalization with Customer as General class (parent) 
- * Direct Association with CheckingAccount and SavingsAccount class
- * SavingsAccount & CheckingAccount classes extend the Account class (base)
- */
+ 
 
 public abstract class Account {
 	private final long ACCOUNT_ID; 
