@@ -3,54 +3,80 @@
  */
 
 
+
+import java.util.ArrayList;
+
 /*
  * UML Class Diagram: 
- * AccountController<>———Account
- * Customer<>———Account
- * Account<———[SavingsAccount, CheckingAccount]
+ * AccountController<>———[Customer, Account]
  * 
- * Generalization with AccountController as General class (parent)
- * Generalization with Customer as General class (parent) 
- * Direct Association with CheckingAccount and SavingsAccount class
- * SavingsAccount & CheckingAccount classes extend the Account class (base)
+ * Generalization and Multiple Inheritance with AccountController class
+ * as parent and Customer class and Account class as children
+ * AccountController class as a General Class (parent)
+ * Customer & Account classes as Subclasses (children)
  */
 
-public abstract class Account {
-	private final long ACCOUNT_ID; 
-	private static long nextAccountId = 1000;
-	protected double balance;
+public class AccountController {
+	//creates Customer class array list called customers
+	private ArrayList<Customer> customers = new ArrayList<Customer>();
+	//creates Account class array list called accounts	
+	private ArrayList<Account> accounts= new ArrayList<Account>();
 	
-	//constructor that makes sure Account ID remains unique
-	public Account() {
-		super();
-		ACCOUNT_ID = nextAccountId;
-		nextAccountId = nextAccountId + 5;
+	Customer customer = null; //empty initialization
+	Account account = null; //empty initialization
+	
+	//Customer constructor from Customer class
+	public Customer createCustomer(String name,String address,String type) {
+		if(type.equals("person")) {
+			customer = new Person(name,address);
+			customers.add(customer);
+		}
+		else if(type.equals("company")) {
+			customer = new Company(name,address);
+			customers.add(customer);
+		}
+		return customer;
 	}
 	
-	//returns the unique Account ID
-	public long getACCOUNT_ID() {
-		return ACCOUNT_ID;
+	//Account constructor from Account class
+	public Account createAccount(Customer customer,String type){
+		
+		if(type.equals("checking")) {
+			account = new CheckingAccount();
+			accounts.add(account);
+			customer.addAccount(account);
+		}
+		else if(type.equals("savings")) {
+			account = new SavingsAccount();
+			accounts.add(account);
+			customer.addAccount(account);
+		}
+		return account;
 	}
 	
-	//withdraw method that allows overdraw
-	public double withdraw(double amount) {
-		balance = balance - amount;
-		return amount;
+	//removes a Customer from the array list then removes the Account
+	public void  removeCustomer(Customer customer) {
+		customers.remove(customer);
+		for(Account account : customer.getAccounts()) {
+			accounts.remove(account);
+		}
 	}
 	
-	//deposit method
-	public void deposit(double amount) {
-		balance = balance + amount;
+	//removes an account from the array list then removes the Customer
+	public void removeAccount(Account account) {
+		accounts.remove(account);
+		for(Customer customer : customers) {
+			customer.removeAccount(account);
+		}
 	}
 	
-	//returns the correct balance which is equal to the balance
-	public void correctBalance(double amount) {
-		balance = amount;
+	//returns all Customers
+	public ArrayList<Customer> getCustomers(){
+		return customers;
 	}
 	
-	//returns balance
-	public double getBalance() {
-		return balance;
+	//returns all Accounts
+	public ArrayList<Account> getAccounts(){
+		return accounts;
 	}
-	
 }
