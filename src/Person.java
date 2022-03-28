@@ -3,15 +3,7 @@
  * @date 03.28.2022
  */
 
-package com.fdmgroup.bankDesignProject;
 
-/*
- * UML Class Diagram: 
- * Customer<———Person
- * 
- * Direct Association with Customer
- * Implements Customer class constructor for all methods
- */
 
 public class Person extends Customer {
 
