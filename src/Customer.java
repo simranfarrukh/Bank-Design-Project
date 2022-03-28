@@ -3,23 +3,10 @@
  * @date 03.28.2022
  */
 
-package com.fdmgroup.bankDesignProject;
+
 
 import java.util.ArrayList;
 import java.util.List;
-
-/*
- * UML Class Diagram: 
- * AccountController<>———Customer
- * Account———<>Customer
- * Customer<———[Person, Company]
- * 
- * Generalization with AccountController as General class (parent)
- * Generalization with Customer as General class (parent) for Account class
- * Direct Association with Person and Company class
- * Person & Company classes extend the Customer class (base)
- */
-
 
 public abstract class Customer {
 	private final long CUSTOMER_ID;
