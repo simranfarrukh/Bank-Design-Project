@@ -1,10 +1,7 @@
 /**
  * @author Simran 
- * @date 03.28.2022
+ * @date 03.23.2023
  */
-
-
-
 public class Person extends Customer {
 
 	//constructor
