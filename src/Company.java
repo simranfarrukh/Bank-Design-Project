@@ -2,8 +2,6 @@
  * @author Simran 
  * @date 03.28.2022
  */
-
-
 public class Company extends Customer{
 
 	//constructor
