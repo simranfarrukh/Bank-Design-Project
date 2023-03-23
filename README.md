@@ -121,4 +121,4 @@ For pull requests, please open an issue first to discuss what you would like to 
 Please make sure to update tests as appropriate.
 
 ## License
-All rights reserve and exclusive to Simran Farrukh. Do not copy or share this code.
+ GPL-3.0 license
