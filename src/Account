@@ -2,8 +2,6 @@
  * @author Simran 
  * @date 03.28.2022
  */
-
-
 public abstract class Account {
 	private final long ACCOUNT_ID; 
 	private static long nextAccountId = 1000;
