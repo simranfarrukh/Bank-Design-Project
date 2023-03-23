@@ -1,6 +1,6 @@
 # Bank Design Project
 
-A simple Bank Design Project implementing standard OOD practice
+A Bank Design Project implementing standard OOD practice
 
 ## UML Diagram
 ![image](https://github.com/simranfarrukh/Bank-Design-Project/blob/main/bank_design_uml.png?raw=true)
