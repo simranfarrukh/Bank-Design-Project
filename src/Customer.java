@@ -1,13 +1,10 @@
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Simran 
  * @date 03.28.2022
  */
-
-
-
-import java.util.ArrayList;
-import java.util.List;
-
 public abstract class Customer {
 	private final long CUSTOMER_ID;
 	private static long nextCustomerId = 2000000;
