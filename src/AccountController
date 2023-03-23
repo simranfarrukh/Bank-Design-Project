@@ -1,12 +1,9 @@
+import java.util.ArrayList;
+
 /**
  * @author Simran 
  * @date 03.28.2022
  */
-
-
-
-import java.util.ArrayList;
-
 public class AccountController {
 	//creates Customer class array list called customers
 	private ArrayList<Customer> customers = new ArrayList<Customer>();
